@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leave Request Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      padding: 40px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #2d89ef;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1b64c3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Leave Request Form</h2>
+    <form method="POST">
+      <label for="employee">Employee Name</label>
+      <input type="text" name="employee" required>
+
+      <label for="employee_number">Employee Number</label>
+      <input type="text" name="employee_number" required>
+
+      <label for="department">Department</label>
+      <select name="department" required>
+        <option value="">-- Select Department --</option>
+        <option>IT</option>
+        <option>Finance</option>
+        <option>Sales</option>
+      </select>
+
+      <label for="leave_category">Leave Category</label>
+      <select name="leave_category" required>
+        <option value="">-- Select Category --</option>
+        <option>ANNUAL LEAVE</option>
+        <option>CASSUAL LEAVE</option>
+        <option>SICK LEAVE</option>
+        <option>SHORT LEAVE</option>
+        <option>LEAVE WITHOUT PAY</option>
+      </select>
+
+      <label for="leave_start">Leave Start Date</label>
+      <input type="date" name="leave_start" required>
+
+      <label for="leave_start_time">Leave Start Time</label>
+      <input type="time" name="leave_start_time" required>
+
+      <label for="leave_end">Leave End Date</label>
+      <input type="date" name="leave_end" required>
+
+      <label for="leave_end_time">Leave End Time</label>
+      <input type="time" name="leave_end_time" required>
+
+      <label for="reason">Reason</label>
+      <textarea name="reason" rows="4" required></textarea>
+
+      <button type="submit">Submit Leave Request</button>
+    </form>
+  </div>
+</body>
+</html>
